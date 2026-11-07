@@ -1,0 +1,16 @@
+{
+  "name": "@shadow/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "node --watch --experimental-strip-types src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "token": "node --experimental-strip-types src/cli-token.ts"
+  },
+  "dependencies": {
+    "@shadow/shared": "*"
+  }
+}

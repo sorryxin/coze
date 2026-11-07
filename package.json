@@ -1,0 +1,21 @@
+{
+  "name": "shadow-classroom",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "npm run build -w @shadow/shared && npm run build -w @shadow/web && npm run build -w @shadow/server",
+    "start": "node apps/server/dist/index.js",
+    "typecheck": "npm run typecheck -w @shadow/shared && npm run typecheck -w @shadow/server && npm run typecheck -w @shadow/web",
+    "test": "node --test --experimental-strip-types packages/shared/test/*.test.ts apps/server/test/*.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "5.7.3"
+  }
+}

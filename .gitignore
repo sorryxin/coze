@@ -1,0 +1,19 @@
+# ===== 敏感文件：绝不入库 =====
+config/coze_oauth_config.json
+.env
+.env.mock
+
+# ===== 依赖与工具链（体积大，可重新获取）=====
+node_modules/
+.toolchain/
+
+# ===== 构建产物 =====
+apps/web/dist/
+apps/server/dist/
+packages/shared/dist/
+*.tsbuildinfo
+
+# ===== 系统与编辑器 =====
+Thumbs.db
+Desktop.ini
+.DS_Store
